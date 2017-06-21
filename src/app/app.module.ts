@@ -4,6 +4,10 @@ import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import { MyApp } from './app.component';
 
 import { CardsPage } from '../pages/cards/cards';
@@ -33,6 +37,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyC9VmBw1NG97ZtzepuzgMy8oZLDLl-dato",
+    authDomain: "digiclubs-114e0.firebaseapp.com",
+    databaseURL: "https://digiclubs-114e0.firebaseio.com",
+    projectId: "digiclubs-114e0",
+    storageBucket: "digiclubs-114e0.appspot.com",
+    messagingSenderId: "1094562026194"
+};
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -71,7 +84,7 @@ export function provideSettings(storage: Storage) {
     SignupPage,
     TabsPage,
     TutorialPage,
-    WelcomePage
+    WelcomePage,
   ],
   imports: [
     BrowserModule,
@@ -84,7 +97,10 @@ export function provideSettings(storage: Storage) {
       }
     }),
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
