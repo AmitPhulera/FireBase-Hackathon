@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { LoginPage } from '../login/login';
-import { SignupPage } from '../signup/signup';
-import { MainPage } from '../../pages/pages';
-import { EventPage } from '../event/event';
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -13,20 +10,14 @@ import { EventPage } from '../event/event';
  * we recommend not using the Welcome page.
 */
 @Component({
-  selector: 'page-welcome',
-  templateUrl: 'welcome.html'
+  selector: 'page-event',
+  templateUrl: 'event.html'
 })
-export class WelcomePage {
+export class EventPage {
 
   constructor(public navCtrl: NavController) { }
 
   login() {
     this.navCtrl.push(LoginPage);
-  }
-  login_fb() {
-    this.navCtrl.push(EventPage);
-  }
-  signup() {
-    this.navCtrl.push(SignupPage);
   }
 }

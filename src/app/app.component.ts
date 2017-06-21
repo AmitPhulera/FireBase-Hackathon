@@ -17,6 +17,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { EventPage } from '../pages/event/event';
 
 import { Settings } from '../providers/providers';
 
@@ -42,13 +43,14 @@ import { TranslateService } from '@ngx-translate/core'
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = LoginPage;
+  rootPage = WelcomePage;
 
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
     { title: 'Tutorial', component: TutorialPage },
     { title: 'Welcome', component: WelcomePage },
+    { title: 'Event', component: EventPage },
     { title: 'Tabs', component: TabsPage },
     { title: 'Cards', component: CardsPage },
     { title: 'Content', component: ContentPage },

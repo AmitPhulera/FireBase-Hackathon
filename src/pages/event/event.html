@@ -1,0 +1,56 @@
+<ion-content scroll="false">
+    <ion-card>
+        <img src="assets/img/bjork-live.jpg"/>
+        <ion-card-content style="position: relative;">
+            <ion-fab right style="top: -30px;">
+                <button ion-fab>
+                    <ion-icon name="share"></ion-icon>
+                </button>
+            </ion-fab>
+            <ion-card-title>Firebase App Fest</ion-card-title>
+            <p>Come and enjoy</p>
+        </ion-card-content>
+        <ion-item>
+            <ion-icon name='checkmark' item-start style="color: #55acee"></ion-icon>
+            People Interested
+            <ion-badge item-end>260k</ion-badge>
+        </ion-item>
+        <ion-item>
+            <ion-icon name='flash' item-start style="color: #f53d3d"></ion-icon>
+            People Going
+            <ion-badge item-end style="background-color: #f53d3d">26k</ion-badge>
+        </ion-item>
+    </ion-card>
+    <ion-card>
+      <br>
+      <ion-list>
+        <ion-item>
+            <!-- <ion-label fixed>Comment</ion-label> -->
+            <ion-avatar item-start>
+              <img src="/assets/img/avatar-ts-woody.png">
+            </ion-avatar>
+            <ion-input type="text" placeholder="Your Comment"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="/assets/img/ian-avatar.png">
+          </ion-avatar>
+          <h2>Awesome! I'll be there</h2>
+          <!-- <p>Ugh. As if.</p> -->
+        </ion-item>
+      </ion-list>
+    </ion-card>
+    <ion-fab bottom right>
+        <button ion-fab>
+            <ion-icon name="hand"></ion-icon>
+        </button>
+        <ion-fab-list side="top">
+            <button ion-fab>
+                <ion-icon name="flash"></ion-icon>
+            </button>
+            <button ion-fab>
+                <ion-icon name="checkmark"></ion-icon>
+            </button>
+        </ion-fab-list>
+    </ion-fab>
+</ion-content>
